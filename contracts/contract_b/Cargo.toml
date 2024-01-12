@@ -1,0 +1,22 @@
+[package]
+name = "contract-b"
+version = "0.0.0"
+authors = ["Stellar Development Foundation <info@stellar.org>"]
+license = "Apache-2.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+
+[dependencies]
+smartdeploy-sdk = { workspace = true }
+soroban-sdk = { workspace = true }
+loam-sdk.workspace = true
+
+[dev_dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+
+[package.metadata.loam]
+contract = true
